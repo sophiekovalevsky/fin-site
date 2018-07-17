@@ -1,0 +1,15 @@
+{
+  "name": "fin-site",
+  "version": "1.0.0",
+  "description": "Marketing site for the Balena Fin board",
+  "main": "index.js",
+  "scripts": {
+    "start": "landr develop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Resin Inc. <hello@etcher.io>",
+  "license": "ISC",
+  "dependencies": {
+    "landr": "^2.0.0-beta0.0.5"
+  }
+}
