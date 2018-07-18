@@ -10,6 +10,9 @@
   "author": "Resin Inc. <hello@etcher.io>",
   "license": "ISC",
   "dependencies": {
-    "landr": "^2.0.0-beta0.0.5"
+    "landr": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-plugin-webpack-alias": "^2.1.2"
   }
 }
