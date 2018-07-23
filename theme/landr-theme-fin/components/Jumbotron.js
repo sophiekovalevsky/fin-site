@@ -18,7 +18,7 @@ export default withTheme(props => {
 
   return (
     <Banner
-			backgroundImage={heroImg}
+			backgroundImage={`.${heroImg}`}
 			color="white"
 			style={{
 				minHeight: 'auto',
