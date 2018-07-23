@@ -4,7 +4,7 @@ module.exports = {
 		lead: 'Balena Fin: a board for fleet owners',
 		analytics: {
 			gaSite: 'balenafin.io', // google Analytics site
-			gaId: 'UA-45671959-5' // google Analytics ID
+			gaId: 'UA-45671959-7' // google Analytics ID
 		},
 		features: [
 			{
