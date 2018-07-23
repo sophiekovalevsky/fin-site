@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "landr develop",
+    "build": "landr build",
+    "serve": "landr serve",
+    "deploy": "landr deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Resin Inc. <hello@etcher.io>",
