@@ -2,6 +2,10 @@ module.exports = {
 	theme: 'theme/landr-theme-fin',
 	settings: {
 		lead: 'Balena Fin: a board for fleet owners',
+		analytics: {
+			gaSite: 'balenafin.io', // google Analytics site
+			gaId: 'UA-45671959-5' // google Analytics ID
+		},
 		features: [
 			{
 				title: 'Raspberry Pi based',
