@@ -8,8 +8,8 @@ import images from 'images'
 
 const Footer = ({ repository, ...props }) => {
   return (
-    <Box py={50} bg={props.theme.colors.gray.dark} color="white">
-      <Flex mb={3} align="center" justify="center" wrap>
+    <Box py={3} bg={props.theme.colors.gray.dark} color="white">
+      <Flex align="center" justify="center" wrap>
         <Text.span>Balena Fin is a hardware project by</Text.span>
         <Link target to="https://resin.io">
           <Image ml={3} style={{ height: '30px' }} src={resinLogo} />

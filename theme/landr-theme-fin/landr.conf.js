@@ -9,24 +9,7 @@ module.exports = {
         path: '/',
         title: 'Home',
         component: `${containers}/Home`
-      },
-      {
-        path: '/changelog',
-        title: 'Changelog',
-        component: `${containers}/Changelog`
-      },
-      {
-        component: `${containers}/Docs`,
-        title: 'Docs',
-        path: '/docs',
-        children: siteProps.docs.map(doc => {
-          return {
-            component: `${containers}/Doc`,
-            title: doc.title,
-            path: `/${doc.slug}`
-          }
-        })
-      },
+			},
       {
         is404: true,
         path: '',

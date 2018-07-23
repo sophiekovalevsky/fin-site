@@ -22,28 +22,23 @@ export default withTheme(props => {
 			color="white"
 			style={{
 				minHeight: 'auto',
-				height: 640
+				height: 640,
+				position: 'relative'
 			}}
 		>
-      <Heading.h2 align="center" mb={3}>
-        {getter('settings.lead') ||
-          getter('repository.description') ||
-          getter('repository.name')}
+			<Box
+				style={{
+					position: 'absolute',
+					top: 0,
+					right: 0,
+					bottom: 0,
+					left: 0,
+					background: 'rgba(0, 0, 0, 0.5)'
+				}}
+			/>
+      <Heading.h2 align="center" mb={3} style={{zIndex: 1}}>
+				Site coming soon...
       </Heading.h2>
-      {getter('settings.installCommand') ? (
-        <Box mb={3}>
-          <Code>{getter('settings.installCommand')}</Code>
-          <Text.p align="center">
-            Or <a href="#downloads">download</a>
-          </Text.p>
-        </Box>
-      ) : (
-        latestAssets && (
-          <Box mb={3}>
-            <DownloadButton assets={latestAssets} />
-          </Box>
-        )
-      )}
     </Banner>
   )
 })
