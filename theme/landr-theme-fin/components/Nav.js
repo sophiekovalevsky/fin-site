@@ -26,9 +26,6 @@ const Nav = withTheme(({ repository }) => {
 						<Link p={2} color="#333" to="http://eepurl.com/doIjXX" blank>
 							Mailing list
 						</Link>
-						<Link p={2} color="#333" to="https://store.resin.io/" blank>
-							Buy
-						</Link>
 					</Flex>
 				</Flex>
 			</Container>
