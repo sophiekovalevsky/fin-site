@@ -66,14 +66,14 @@
     "releases_url": "https://api.github.com/repos/resin-io/fin-site/releases{/id}",
     "deployments_url": "https://api.github.com/repos/resin-io/fin-site/deployments",
     "created_at": "2018-07-17T09:40:29Z",
-    "updated_at": "2018-07-23T14:29:40Z",
-    "pushed_at": "2018-07-23T14:32:27Z",
+    "updated_at": "2018-07-23T14:37:19Z",
+    "pushed_at": "2018-08-03T10:28:39Z",
     "git_url": "git://github.com/resin-io/fin-site.git",
     "ssh_url": "git@github.com:resin-io/fin-site.git",
     "clone_url": "https://github.com/resin-io/fin-site.git",
     "svn_url": "https://github.com/resin-io/fin-site",
     "homepage": null,
-    "size": 4695,
+    "size": 6704,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "JavaScript",
@@ -85,10 +85,10 @@
     "forks_count": 0,
     "mirror_url": null,
     "archived": false,
-    "open_issues_count": 0,
+    "open_issues_count": 3,
     "license": null,
     "forks": 0,
-    "open_issues": 0,
+    "open_issues": 3,
     "watchers": 0,
     "default_branch": "master",
     "organization": {
@@ -112,7 +112,7 @@
       "site_admin": false
     },
     "network_count": 0,
-    "subscribers_count": 2
+    "subscribers_count": 12
   },
   "releases": [],
   "contributors": [
@@ -135,7 +135,7 @@
       "received_events_url": "https://api.github.com/users/LucianBuzzo/received_events",
       "type": "User",
       "site_admin": false,
-      "contributions": 8
+      "contributions": 12
     }
   ]
 }

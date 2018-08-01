@@ -2,11 +2,11 @@
     import React, { Component } from 'react'
     import { Route } from 'react-router-dom'
 
-    import _Users_lucianbuzzo_projects_fin_site_theme_landr_theme_fin_pages_Home from '/Users/lucianbuzzo/projects/fin-site/theme/landr-theme-fin/pages/Home'
-import _Users_lucianbuzzo_projects_fin_site_theme_landr_theme_fin_pages____ from '/Users/lucianbuzzo/projects/fin-site/theme/landr-theme-fin/pages/404'
+    import _Users_dnlytras_Documents_Projects_fin_site_theme_landr_theme_fin_pages_Home from '/Users/dnlytras/Documents/Projects/fin-site/theme/landr-theme-fin/pages/Home'
+import _Users_dnlytras_Documents_Projects_fin_site_theme_landr_theme_fin_pages____ from '/Users/dnlytras/Documents/Projects/fin-site/theme/landr-theme-fin/pages/404'
     const templateMap = {
-    t_0: _Users_lucianbuzzo_projects_fin_site_theme_landr_theme_fin_pages_Home,
-t_1: _Users_lucianbuzzo_projects_fin_site_theme_landr_theme_fin_pages____
+    t_0: _Users_dnlytras_Documents_Projects_fin_site_theme_landr_theme_fin_pages_Home,
+t_1: _Users_dnlytras_Documents_Projects_fin_site_theme_landr_theme_fin_pages____
   }
     const templateTree = {c:{"404":{t:"t_1"},"/":{t:"t_0"}}}
     
@@ -24,7 +24,7 @@ t_1: _Users_lucianbuzzo_projects_fin_site_theme_landr_theme_fin_pages____
     }
   
 
-    export const paths = [{"path":"/","title":"Home","component":"/Users/lucianbuzzo/projects/fin-site/theme/landr-theme-fin/pages/Home","hasGetProps":false},{"is404":true,"path":"/404","component":"/Users/lucianbuzzo/projects/fin-site/theme/landr-theme-fin/pages/404","hasGetProps":false}]
+    export const paths = [{"path":"/","title":"Home","component":"/Users/dnlytras/Documents/Projects/fin-site/theme/landr-theme-fin/pages/Home","hasGetProps":false},{"is404":true,"path":"/404","component":"/Users/dnlytras/Documents/Projects/fin-site/theme/landr-theme-fin/pages/404","hasGetProps":false}]
 
     export default class Routes extends Component {
       render () {
