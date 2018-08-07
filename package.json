@@ -13,7 +13,7 @@
   "author": "Resin Inc. <hello@etcher.io>",
   "license": "ISC",
   "dependencies": {
-    "landr": "^2.1.0"
+    "landr": "^2.2.0"
   },
   "devDependencies": {
     "babel-plugin-webpack-alias": "^2.1.2"

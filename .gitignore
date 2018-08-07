@@ -78,3 +78,11 @@ typings/
 
 
 # End of https://www.gitignore.io/api/node
+
+# OS generated files
+.DS_Store
+.DS_Store?
+
+# Misc
+www/dist/
+www/cache/github.json

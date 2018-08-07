@@ -4,6 +4,7 @@ import { Image, Text, Box, Flex, Container } from 'resin-components'
 
 import resinLogo from '../images/resin.svg'
 import finLogo from '../images/balenaFin_Final.svg'
+
 import { Link, assets } from 'landr'
 
 const Brand = () => (
@@ -13,24 +14,39 @@ const Brand = () => (
 )
 
 const Nav = withTheme(({ repository }) => {
-  return (
-    <Box
-			py={2}
-			color="#333"
-		>
+	return (
+		<Box py={2} color="#333">
 			<Container>
 				<Flex justify="space-between">
 					<Brand />
 
 					<Flex>
-						<Link p={2} color="#333" to="http://eepurl.com/doIjXX" blank>
+						<Link
+							p={2}
+							mx={2}
+							color="#333"
+							to={assets['balenaFin_datasheet']}
+							blank
+						>
+							Datasheet
+						</Link>
+						<Link
+							p={2}
+							mx={2}
+							color="#333"
+							to={assets['balenaFin_manual']}
+							blank
+						>
+							Manual
+						</Link>
+						<Link p={2} mx={2} color="#333" to="http://eepurl.com/doIjXX" blank>
 							Mailing list
 						</Link>
 					</Flex>
 				</Flex>
 			</Container>
-    </Box>
-  )
+		</Box>
+	)
 })
 
 export default Nav
