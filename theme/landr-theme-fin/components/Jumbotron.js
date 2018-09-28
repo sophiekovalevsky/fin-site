@@ -1,28 +1,30 @@
-import React from 'react'
-import { withTheme } from 'styled-components'
-import get from 'lodash/get'
+import React from 'react';
+import { withTheme } from 'styled-components';
+import get from 'lodash/get';
 
-import { Heading, Text, Banner, Image, Box, Flex } from 'resin-components'
-import DownloadButton from 'components/DownloadButton'
-import Code from 'components/Code'
-import { Share } from 'react-twitter-widgets'
-import { Link, assets } from 'landr'
-import heroImg from '../images/balena-render.png'
+import {  Button, Heading, Banner, Image, Box, Flex } from 'resin-components';
+import {  Link } from 'landr';
+import heroImg from '../images/fin-board-hero.png';
+import finLogo from '../images/balena-fin-white.svg';
+
+const Brand = () => (
+	<Box>
+		<Image style={{ height: '100px' }} src={finLogo} />
+	</Box>
+);
 
 export default withTheme(props => {
-  const getter = key => get(props, key)
-  const latestRelease = getter('releases[0]')
-  const latestAssets = get(latestRelease, 'assets')
-  const version = get(latestRelease, 'tag_name')
+	const getter = key => get(props, key);
 
-  return (
-    <Banner
+	return (
+		<Banner
+			py={3}
 			backgroundImage={`.${heroImg}`}
 			color="white"
 			style={{
 				minHeight: 'auto',
 				height: 640,
-				position: 'relative'
+				position: 'relative',
 			}}
 		>
 			<Box
@@ -32,12 +34,22 @@ export default withTheme(props => {
 					right: 0,
 					bottom: 0,
 					left: 0,
-					background: 'rgba(0, 0, 0, 0.5)'
+					background: 'rgba(0, 0, 0, 0.5)',
 				}}
 			/>
-      <Heading.h2 align="center" mb={3} style={{zIndex: 1}}>
-				Site coming soon...
-      </Heading.h2>
-    </Banner>
-  )
-})
+			<Flex direction='column' align='center' style={{ zIndex: 1 }}>
+				<Brand />
+				<Heading.h2 align="center" my={3}>
+					{getter('settings.lead') ||
+						getter('repository.description') ||
+						getter('repository.name')}
+				</Heading.h2>
+				<Button primary mt={5}>
+					<Link color='white' mx={3} to="https://store.resin.io/" blank>
+						Order now
+					</Link>
+				</Button>
+			</Flex>
+		</Banner>
+	);
+});

@@ -2,9 +2,7 @@ import React from 'react'
 import { Flex, Box, Text, Image } from 'resin-components'
 import { Link } from 'landr'
 import { withTheme } from 'styled-components'
-import get from 'lodash/get'
 import resinLogo from '../images/resin.svg'
-import images from 'images'
 
 const Footer = ({ repository, ...props }) => {
   return (

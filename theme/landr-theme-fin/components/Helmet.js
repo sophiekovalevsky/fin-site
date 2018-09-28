@@ -8,7 +8,7 @@ export default withTheme(props => {
   return (
     <Head>
       <meta charSet="UTF-8" />
-      <title>{`${getter('repository.name')} - ${getter('settings.lead') ||
+      <title>{`${getter('settings.lead') ||
         getter('repository.description')}`}</title>
       <link rel="icon" href={assets['favicon']} type="image/x-icon" />
       <link
@@ -17,7 +17,7 @@ export default withTheme(props => {
       />
       <meta name="theme-color" content={getter('theme.colors.primary.main')} />
       <meta name="og:type" content="og:website" />
-      <meta name="og:site_name" content={getter('repository.name')} />
+      <meta name="og:site_name" content={getter('settings.title')} />
       <meta name="og:description" content={getter('repository.description')} />
       <meta name="og:image" content={assets[getter('repository.name')]} />
     </Head>
