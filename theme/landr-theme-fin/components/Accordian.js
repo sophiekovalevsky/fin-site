@@ -3,7 +3,7 @@ import { Box } from 'resin-components'
 
 const Collapse = Box.extend`
   overflow: hidden;
-  max-width: 500px;
+  max-width: 800px;
   max-height: ${props => (props.isOpen ? '100vh' : '0')};
   transition: max-height 0.4s ease-in-out;
 `
@@ -42,7 +42,7 @@ class Accordian extends Component {
               }}
             >
               <Box>{item.title}</Box>
-              <Collapse isOpen={isOpen}>{item.render()}</Collapse>
+              <Collapse mb={2} isOpen={isOpen}>{item.render()}</Collapse>
             </Wrapper>
           )
         })}
