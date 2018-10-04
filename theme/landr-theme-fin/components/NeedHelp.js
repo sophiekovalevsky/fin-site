@@ -9,9 +9,9 @@ const Footer = () => {
 			<Container>
 				<Flex justify="center" my={4}>
 					<Text.span fontSize={3}>
-						Need help? Check-out the{' '}
+						Need help? Check out the{' '}
 						<Link blank to="https://forums.resin.io/c/balena-fin">
-							Community forums
+							community forums
 						</Link>
 					</Text.span>
 				</Flex>
