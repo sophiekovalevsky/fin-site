@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { getSiteProps } from '@resin.io/react-static';
 import { Link } from 'landr';
 import { Container, Flex, Box, Link as RLink } from 'resin-components';
@@ -68,6 +69,7 @@ export default getSiteProps(({ children, docs, ...props }) => {
 	// Helps with avoiding build errors, due to window being undefined in node
 	if (windowGlobal) {
 		pathSlug = windowGlobal.location.pathname.replace('/docs/', '');
+		pathSlug = _.trim(pathSlug, '/');
 		pathHash = windowGlobal.location.hash.substr(1);
 	}
 
