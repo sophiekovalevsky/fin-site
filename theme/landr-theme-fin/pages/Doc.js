@@ -7,7 +7,7 @@ import Doc from '../components/Doc';
 
 export default getSiteProps(({ docs, location }) => {
 	let key = location.pathname.replace('/docs/', '');
-	key = _.trimEnd(key, '/');
+	key = _.trim(key, '/');
 
 	const document = <Doc {...docs.find(({ slug }) => slug === key)} />;
 	return <DocsWrapper>{document}</DocsWrapper>;

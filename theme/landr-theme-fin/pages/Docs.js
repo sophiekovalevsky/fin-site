@@ -69,7 +69,7 @@ export default getSiteProps(({ children, docs, ...props }) => {
 	// Helps with avoiding build errors, due to window being undefined in node
 	if (windowGlobal) {
 		pathSlug = windowGlobal.location.pathname.replace('/docs/', '');
-		pathSlug = _.trimEnd(pathSlug, '/');
+		pathSlug = _.trim(pathSlug, '/');
 		pathHash = windowGlobal.location.hash.substr(1);
 	}
 
