@@ -5,6 +5,10 @@
 * Configuration: Ignore /dist folder [Dimitrios Lytras]
 * Configuration: Remove all .DS_Store generated files [Dimitrios Lytras]
 
+## v0.3.0 - 2018-10-09
+
+* Fix pixelated header image on datasheet [Nicolas Tzovanis]
+
 ## v0.2.0 - 2018-10-04
 
 * Wordings: Update the 'Need Help' section wording [Dimitrios Lytras]
