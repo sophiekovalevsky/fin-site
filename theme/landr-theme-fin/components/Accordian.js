@@ -1,54 +1,66 @@
-import React, { Component } from 'react'
-import { Box } from 'resin-components'
+import React, { Component } from 'react';
+import { Box, Divider, Flex, Text } from 'resin-components';
 
 const Collapse = Box.extend`
-  overflow: hidden;
-  max-width: 800px;
-  max-height: ${props => (props.isOpen ? '100vh' : '0')};
-  transition: max-height 0.4s ease-in-out;
-`
+	overflow: hidden;
+	max-width: 800px;
+	max-height: ${props => (props.isOpen ? '100vh' : '0')};
+	transition: max-height 0.4s ease-in-out;
+`;
 
 const Wrapper = Box.extend`
-  cursor: pointer;
-`
+	cursor: pointer;
+`;
 
 class Accordian extends Component {
-  constructor() {
-    super()
-    this.state = {
-      openIndex: null
-    }
-  }
+	constructor() {
+		super();
+		this.state = {
+			openIndex: null,
+		};
+	}
 
-  toggle(key) {
-    if (this.state.openIndex === key) {
-      key = null
-    }
-    this.setState({
-      openIndex: key
-    })
-  }
+	toggle(key) {
+		if (this.state.openIndex === key) {
+			key = null;
+		}
+		this.setState({
+			openIndex: key,
+		});
+	}
 
-  render() {
-    return (
-      <Box>
-        {this.props.items.map((item, i) => {
-          const isOpen = this.state.openIndex === i
-          return (
-            <Wrapper
-              key={i}
-              onClick={() => {
-                this.toggle(i)
-              }}
-            >
-              <Box>{item.title}</Box>
-              <Collapse mb={2} isOpen={isOpen}>{item.render()}</Collapse>
-            </Wrapper>
-          )
-        })}
-      </Box>
-    )
-  }
+	render() {
+		return (
+			<Box>
+				{this.props.items.map((item, i) => {
+					const isOpen = this.state.openIndex === i;
+					return (
+						<Wrapper
+							key={i}
+							onClick={() => {
+								this.toggle(i);
+							}}
+						>
+							<Flex align="center" justify="space-between">
+								<Box width={11 / 12} px={16}>
+									{item.title}
+								</Box>
+								<Box width={1 / 12}>
+									<Text pr={16} fontSize={24} align="end">
+										{isOpen ? '−' : '+'}
+									</Text>
+								</Box>
+							</Flex>
+							<Collapse px={16} isOpen={isOpen}>
+								{item.render()}
+							</Collapse>
+							<Divider m={0} height={1} color="#c1c7dd" />
+						</Wrapper>
+					);
+				})}
+			</Box>
+		);
+	}
 }
 
-export default Accordian
+export default Accordian;

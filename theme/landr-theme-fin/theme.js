@@ -3,16 +3,16 @@ import reduce from 'lodash/reduce';
 import get from 'lodash/get';
 import isObject from 'lodash/isObject';
 
-const primary = '#ab47bc';
-const secondary = '#FFC523';
-const tertiary = '#4D5057';
-const quartenary = '#EBEFF4';
+const primary = '#ac3bb5';
+const secondary = '#f0e9f3';
+const tertiary = '#c1c7dd';
+const quartenary = '#f8f9fd';
 
 const danger = '#FF423D';
 const warning = '#FCA321';
 const success = '#76C950';
 const info = '#1496E1';
-const text = '#3c3e42';
+const text = '#2a506f';
 const gray = {
 	light: '#f4f4f4',
 	main: '#c6c8c9',
@@ -55,7 +55,7 @@ const createColors = colors => {
 const defaultControlHeight = 36;
 const emphasizedControlHeight = 45;
 
-export const breakpoints = [32, 48, 64, 80];
+export const breakpoints = [32, 48, 64, 90];
 
 export const space = [
 	0,
@@ -72,7 +72,7 @@ export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96];
 export const weights = [400, 700];
 
 export const radius = 4;
-export const font = 'Roboto, Arial, sans-serif';
+export const font = 'Nunito, Arial, sans-serif';
 export const monospace = "'Ubuntu Mono', 'Courier New', monospace";
 
 const theme = userTheme => {
@@ -92,8 +92,29 @@ const theme = userTheme => {
 };
 
 const globalStyles = theme => `
+
+@font-face {
+  font-family: "Nunito";
+	src: url("/fonts/Nunito-Regular.ttf") format("ttf");
+	font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nunito";
+	src: url("/fonts/Nunito-Regular.ttf") format("ttf");
+	font-weight: bold;
+}
+
+@font-face {
+  font-family: "CircularStd";
+	src: url("/fonts/CircularStd-Book.otf") format("opentype");
+	font-weight: bold;
+}
+
+
 * { box-sizing: border-box; }
 body {
+	font-family: Nunito;
 	margin: 0;
 	color: ${theme.colors.text.main};
 }
@@ -154,6 +175,9 @@ table tbody td {
 	color: ${theme.colors.text.main};
 	padding: 16px;
 	font-size: ${fontSizes[1]}px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: CircularStd;
 }
 `;
 

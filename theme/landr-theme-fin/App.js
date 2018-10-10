@@ -25,7 +25,6 @@ export default getSiteProps(props => {
 	const getProp = key => get(props, key);
 	const mergedTheme = ThemeStyles(getProp('settings.theme'));
 	injectGlobal`${globalStyles(mergedTheme)}`;
-
 	return (
 		<Router>
 			<Tracker
