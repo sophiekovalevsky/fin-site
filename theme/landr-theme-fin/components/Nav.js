@@ -8,38 +8,15 @@ import {
 	Text,
 	DropDownButton,
 } from 'resin-components';
+import styled from 'styled-components';
+import { Link } from 'landr';
 
-import resinLogo from '../images/resin-black.svg';
+import balenaLogo from '../images/balena.svg';
 import finLogo from '../images/balena-fin.svg';
 
-import { Link, assets } from 'landr';
-import styled from 'styled-components';
+import { navigationLinks } from '../helpers';
 
-const navigationLinks = [
-	{
-		text: 'Docs',
-		link: '/docs',
-	},
-	{
-		text: 'Getting Started',
-		link: '/docs/getting-started',
-	},
-	{
-		text: 'Datasheet',
-		link: assets['balenaFin_datasheet'],
-		isBlank: true,
-	},
-	{
-		text: 'Forums',
-		link: 'https://forums.resin.io/c/balena-fin',
-		isBlank: true,
-	},
-	{
-		text: 'Store',
-		link: 'https://store.resin.io/',
-		isBlank: true,
-	},
-];
+const windowGlobal = typeof window !== 'undefined' && window;
 
 const Brand = () => (
 	<Box>
@@ -49,9 +26,10 @@ const Brand = () => (
 
 const MenuLink = styled(Link)`
 	&& {
-		color: ${props => props.theme.colors.text.main};
 		position: relative;
+		font-size: 14px;
 		transition: color .1s ease-in;
+		font-weight: bold;
 
 		&:before {
 			content: ${props => (props.underline ? ' ' : 'none')};
@@ -73,20 +51,32 @@ const MenuLink = styled(Link)`
 	}
 `;
 
-const StickyHeader = styled(Box)`
+const TranparentHeader = styled(Box)`
 	&& {
-		position: sticky;
+		position: absolute;
 		top: 0;
-		background: #fff;
+		width: 100%;
+		background: transparent;
 		z-index: 2;
-		box-shadow: 0 0 2px 1px #efefef;
 	}
+`;
+
+const SolidHeader = styled(Box)`
+	position: sticky;
+	top: 0px;
+	z-index: 2;
+	box-shadow: rgb(239, 239, 239) 0px 0px 2px 1px;
+	background: rgb(255, 255, 255);
 `;
 
 const MobileNavigation = styled(DropDownButton)`
 	display: none;
 	@media all and (max-width: ${props => props.theme.breakpoints[2]}em) {
 		display: block;
+	}
+	&& > div {
+		left: -85px;
+		box-shadow: none;
 	}
 `;
 
@@ -97,27 +87,44 @@ const DesktopNavigation = styled(Flex)`
 	}
 `;
 
-const Nav = withTheme(() => {
+const Nav = withTheme(props => {
+	let pathSlug = null;
+	if (windowGlobal) {
+		pathSlug = windowGlobal.location.pathname;
+		pathSlug = _.trim(pathSlug, '/');
+	}
+
+	const isIndex = _.isEmpty(pathSlug);
+
+	// If Index, show the transparent Header, that blends with the svg background
+	const HeaderElement = isIndex ? TranparentHeader : SolidHeader;
+
 	return (
-		<StickyHeader py={2}>
+		<HeaderElement py={2}>
 			<Container>
 				<Flex justify="space-between" align="center" p={2}>
 					<Box>
-						<Flex wrap mb={1}>
-							<Text.span fontSize={1}>a hardware project by</Text.span>
-							<Link target to="https://resin.io">
-								<Image ml={2} style={{ height: '20px' }} src={resinLogo} />
+						<Flex wrap mb={1} align='center'>
+							<Text.span fontSize={12}>a hardware project by</Text.span>
+							<Link target to="https://balena.io">
+								<Image ml={2} style={{ height: '20px' }} src={balenaLogo} />
 							</Link>
 						</Flex>
-						<Link to="/">
+						<Link mt={2} to="/">
 							<Brand />
 						</Link>
 					</Box>
 
-					<MobileNavigation joined primary>
+					<MobileNavigation joined secondary outline>
 						<Flex direction="column">
 							{navigationLinks.map((entry, i) => (
-								<MenuLink my={2} key={i} to={entry.link} blank={entry.isBlank}>
+								<MenuLink
+									color={props.theme.colors.primary.main}
+									my={2}
+									key={i}
+									to={entry.link}
+									blank={entry.isBlank}
+								>
 									{entry.text}
 								</MenuLink>
 							))}
@@ -127,6 +134,7 @@ const Nav = withTheme(() => {
 					<DesktopNavigation align="center">
 						{navigationLinks.map((entry, i) => (
 							<MenuLink
+								color={isIndex ? '#fff' : props.theme.colors.primary.main}
 								underline
 								mx={3}
 								key={i}
@@ -139,7 +147,7 @@ const Nav = withTheme(() => {
 					</DesktopNavigation>
 				</Flex>
 			</Container>
-		</StickyHeader>
+		</HeaderElement>
 	);
 });
 

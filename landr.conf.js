@@ -3,10 +3,13 @@ module.exports = {
 	settings: {
 		title: 'Balena Fin',
 		lead: 'Balena Fin: a board for fleet owners',
+		description:
+			'The balena Fin is a carrier board for the Raspberry Pi Compute Module.',
 		analytics: {
 			gaSite: 'balenafin.io', // google Analytics site
 			gaId: 'UA-45671959-7', // google Analytics ID
 		},
+		featuresLead: 'Hardened design for field deployment use cases',
 		features: [
 			{
 				title: 'Raspberry Pi based',
@@ -39,13 +42,19 @@ module.exports = {
 				icon: 'realtime',
 			},
 			{
-				title: 'Expansion',
+				title: 'Expandable',
 				description:
-					'Raspberry Pi 40-pin HAT, PCIe, HDMI, MIPI, I2C, SPI, UART, GPIO',
+					'Multiple interfaces to fit any use case: Raspberry Pi HAT compatible, HDMI, MIPI, I2C, SPI, UART and GPIO',
 				icon: 'stack',
 			},
 		],
-		motivation:
-			"We designed the Balena Fin to reduce the friction that fleet owners face while building, deploying and scaling large fleets of connected devices. We’ve been working with our community and customers on thousands of use cases over the past few years, and it has become clear that scaling hardware is a problem.</br></br>The Balena Fin is a Raspberry Pi Compute Module carrier board that can run all the software that the Raspberry Pi can run, but hardened for deployment in the field. Even better, it’s offered at an accessible price point relative to other industrial boards.</br></br>Read more in our announcement <a href='https://resin.io/blog/introducing-project-fin-a-board-for-fleet-owners/' rel='noopener' target='_blank'>blog post</a>.",
+		motivation: {
+			blogPost:
+				'https://resin.io/blog/introducing-project-fin-a-board-for-fleet-owners',
+			paragraphs: [
+				'We designed the Balena Fin to reduce the friction that fleet owners face while building, deploying and scaling large fleets of connected devices. We’ve been working with our community and customers on thousands of use cases over the past few years, and it has become clear that scaling hardware is a problem.',
+				'The Balena Fin is a Raspberry Pi Compute Module carrier board that can run all the software that the Raspberry Pi can run, but hardened for deployment in the field. Even better, it’s offered at an accessible price point relative to other industrial boards.',
+			],
+		},
 	},
 };

@@ -6,6 +6,7 @@ import Features from '../components/Features';
 import DeviceMap from '../components/DeviceMap';
 import Motivation from '../components/Motivation';
 import NeedHelp from '../components/NeedHelp';
+import Package from '../components/Package';
 import get from 'lodash/get';
 
 export default getSiteProps(props => {
@@ -15,8 +16,9 @@ export default getSiteProps(props => {
 			<Jumbotron {...props} />
 
 			{getter('settings.features') && <Features {...props} />}
-			<DeviceMap />
 			{getter('settings.motivation') && <Motivation {...props} />}
+			<DeviceMap />
+			<Package />
 			{getter('faqs[0]') && <FAQ faqs={props.faqs} />}
 			<NeedHelp />
 		</div>

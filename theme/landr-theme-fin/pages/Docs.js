@@ -88,7 +88,7 @@ export default getSiteProps(({ children, docs, ...props }) => {
 
 	return (
 		<Wrapper>
-			<DocContainer>
+			<DocContainer pt={4}>
 				<Flex>
 					<Box width={1 / 4} p={2} style={{ borderRight: '1px solid #efefef' }}>
 						<List>
