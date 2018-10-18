@@ -95,14 +95,14 @@ const globalStyles = theme => `
 
 @font-face {
   font-family: "Nunito";
-	src: url("/fonts/Nunito-Regular.ttf") format("ttf");
+	src: url("/fonts/Nunito-Regular.ttf") format("truetype");
 	font-weight: normal;
 }
 
 @font-face {
   font-family: "Nunito";
-	src: url("/fonts/Nunito-Regular.ttf") format("ttf");
-	font-weight: bold;
+	src: url("/fonts/Nunito-Bold.ttf") format("truetype");
+	font-weight: 700;
 }
 
 @font-face {

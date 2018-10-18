@@ -4,7 +4,7 @@ module.exports = {
 		title: 'Balena Fin',
 		lead: 'Balena Fin: a board for fleet owners',
 		description:
-			'Robust carrier board for Raspberry Pi Compute Module.',
+			'The balena Fin is a carrier board for the Raspberry Pi Compute Module.',
 		analytics: {
 			gaSite: 'balenafin.io', // google Analytics site
 			gaId: 'UA-45671959-7', // google Analytics ID

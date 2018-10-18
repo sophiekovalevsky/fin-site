@@ -54,14 +54,14 @@ export default withTheme(props => {
 							<Box width={[1, 1, 1, 2 / 5]} px={10} mb={40}>
 								<Text
 									fontSize={16}
-									pr={[0, 0, '25%', '40%']}
+									pr={[0, 0, '20px', '40px']}
 									style={{ lineHeight: '1.6' }}
 								>
 									{getter('settings.description')}
 								</Text>
 								<Button round primary outline borderless mt={5}>
 									<Link as="Button" mx={3} href="https://store.resin.io/" blank>
-										Order now
+									Try balenaFin
 									</Link>
 								</Button>
 							</Box>
