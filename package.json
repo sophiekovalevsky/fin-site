@@ -1,6 +1,6 @@
 {
   "name": "fin-site",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Website for the Balena Fin board",
   "main": "index.js",
   "scripts": {
