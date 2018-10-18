@@ -1,7 +1,7 @@
 ---
 
 title: Embedding the Balena Fin in products
-order: 4
+order: 5
 
 ---
 
