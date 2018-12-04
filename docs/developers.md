@@ -64,7 +64,7 @@ This device sports 9 status LEDs varying from power, eMMC, ethernet, WiFi, WAN, 
 
 We are working on identifying and documenting cards known to work out of the box on the board. If you plan on adding LTE capability to the device, we suggest the Quectel EC20EA-MINIPCIE: the card is known to work out of the box, hence only APN configuration is required. On ResinOS (2.0.0+) you do so by adding a NetworkManager profile in the boot partition under the "system-connections" folder. You can find more info about this on our docs at: [https://docs.resin.io/deployment/network/2.0.0/#cellular-modem-setup](https://docs.resin.io/deployment/network/2.0.0/#cellular-modem-setup).
 
-![Fin bottom with mPCIe modem](https://github.com/resin-io/balena-fin/raw/master/documentation/manual/pictures/fin_bottom_modem.jpg)
+![Fin bottom with mPCIe modem](https://github.com/sophiekovalevsky/fin-site/blob/master/www/public/assets/fin_bottom_modem.jpg)
 
 Disabling RF activity on mPCIe radio cards
 
